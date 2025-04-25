@@ -1,0 +1,25 @@
+name: brightpms
+
+services:
+  db: # The name of the service (container)
+    image: mysql:8.0 # Use the official MySQL 8.0 image from Docker Hub
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: pms
+      MYSQL_USER: pms
+      MYSQL_PASSWORD: password
+    volumes:
+      - mysql_data:/var/lib/mysql # Persist data even if the container is stopped/removed
+    ports:
+      - 3376:3306 # Expose the MySQL port to the host (optional, for direct access)
+  pms:
+    build:
+      context: ../
+      dockerfile: ./setup/Dockerfile
+    image: brightpms
+    depends_on: # Define service dependencies
+      - db #  Make sure the database service starts before your application
+    ports:
+      - 8080:80
+volumes:
+  mysql_data: # Define the named volume for data persistence

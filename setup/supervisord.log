@@ -1,0 +1,12 @@
+2025-04-25 03:50:59,999 CRIT Supervisor running as root (no user in config file)
+2025-04-25 03:51:00,001 INFO supervisord started with pid 1
+2025-04-25 03:51:01,004 INFO spawned: 'apache2' with pid 9
+2025-04-25 03:51:02,065 INFO success: apache2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-04-25 03:51:02,065 INFO exited: apache2 (exit status 0; expected)
+2025-04-25 03:52:28,337 WARN received SIGTERM indicating exit request
+2025-04-25 03:53:01,340 CRIT Supervisor running as root (no user in config file)
+2025-04-25 03:53:01,341 INFO supervisord started with pid 1
+2025-04-25 03:53:02,343 INFO spawned: 'apache2' with pid 9
+2025-04-25 03:53:03,375 INFO success: apache2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-04-25 03:53:03,378 INFO exited: apache2 (exit status 0; expected)
+2025-04-25 03:53:53,986 WARN received SIGTERM indicating exit request
